@@ -1,6 +1,5 @@
-const express = require("express");
 const mongoose = require("mongoose");
-require('dotenv').config();
+const DatabaseURI = require('./config.json');
 
 main()
     .then(() => {
@@ -10,5 +9,5 @@ main()
 
 async function main() {
     // CONNECTING MONGOOSE TO  OUR MONGODB DATABASE
-    await mongoose.connect(process.env.databaseURI);
+    await mongoose.connect(DatabaseURI.databaseURI);
 }

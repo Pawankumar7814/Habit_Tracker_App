@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const db = require("./config/mongoose");
+const conf = require("./config/config.json");
 const session = require("express-session");
 const passport = require("passport");
 const passport_local = require("./config/passport_local");
@@ -28,7 +29,7 @@ app.use(
             maxAge: 1000 * 60 * 10,
         },
         store: mongoStore.create({
-                mongoUrl: process.env.databaseURI,
+                mongoUrl: conf.databaseURI,
                 mongooseConnection: db,
                 autoRemove: "disabled",
             },
@@ -43,8 +44,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
-
-
 
 // SETUP VIEWS SETTING
 app.set("view engine", "ejs");
