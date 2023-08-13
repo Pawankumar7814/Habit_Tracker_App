@@ -1,22 +1,10 @@
-# this is habit tacker website
+# Habit Tracker App
+1. Authentication using passport js
+2. Create, view and delete the habit
+3. Mark the habit status
 
-## link of my website is -:
 
-# https://myhabittracker.herokuapp.com/
-
-## dependecy of my projects are -:
-
-    ### "connect-mongo": "^4.6.0",
-    ### "ejs": "^3.1.8",
-    ### "express": "^4.18.1",
-    ### "express-session": "^1.17.3",
-    ### "mongoose": "^6.5.2",
-    ### "nodemon": "^2.0.19",
-    ### "passport": "^0.6.0",
-    ### "passport-local": "^1.0.0"
-
-## tools are -:
-
-### vs code
-
-### git
+# Model
+1. User to store the user data
+2. Session to store the session
+3. Habit to store the habit
